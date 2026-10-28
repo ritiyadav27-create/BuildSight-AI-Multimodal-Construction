@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: buildsight-construction-intelligence
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
